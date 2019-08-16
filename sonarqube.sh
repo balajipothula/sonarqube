@@ -8,11 +8,11 @@
 sudo yum -y update
 
 # installing openjdk8.
-sudo yum -y install java-1.8.0-openjdk-devel.x86_64
+sudo yum -y install unzip java-1.8.0-openjdk-devel.x86_64
 
 mkdir root                                                                                                         && \
 curl -J -L https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.2.1.zip -o $HOME/root/sonarqube.zip && \
-tar xzf $HOME/root/nexus.tar.gz -C $HOME/root/                                                                     && \
+unzip   $HOME/root/sonarqube.zip -C $HOME/root/                                                                    && \
 rm -rf  $HOME/root/nexus.tar.gz                                                                                    && \
 mv      $HOME/root/nexus-*       $HOME/root/.nexusoss2                                                             && \
 mv      $HOME/root/sonatype-work $HOME/root/.artifactory                                                           && \
