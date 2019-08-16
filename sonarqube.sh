@@ -8,7 +8,7 @@
 sudo yum -y update
 
 # installing openjdk8.
-sudo yum -y install java-1.8.0-openjdk
+sudo yum -y install java-1.8.0-openjdk-devel.x86_64
 
 mkdir root                                                                                                         && \
 curl -J -L https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.2.1.zip -o $HOME/root/sonarqube.zip && \
