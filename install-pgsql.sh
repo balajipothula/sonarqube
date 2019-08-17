@@ -24,6 +24,8 @@ systemctl enable postgresql
 #
 systemctl start postgresql
 
+sudo chown -R postgres:postgres /var/lib/pgsql && sudo chmod -R u=rwX,go= /var/lib/pgsql
+
 # 
 sudo passwd postgres
 
