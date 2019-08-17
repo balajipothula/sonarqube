@@ -13,7 +13,3 @@ https://www.cyberciti.biz/faq/install-and-setup-postgresql-on-rhel-8/
 vi /var/lib/pgsql/data/pg_hba.conf
 trust
 md5
-
-psql
-
-select pg_reload_conf();
