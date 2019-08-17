@@ -27,5 +27,24 @@ systemctl enable postgresql
 # chaging pgsql directory owner to postgres.
 chown -R postgres:postgres /var/lib/pgsql && sudo chmod -R u=rwX,go= /var/lib/pgsql
 
-#
+# changing postgres user password.
+sudo passwd postgres
+
+# switching to postgres user.
+su - postgres
+
+# creating new user
+createuser sonar
+
+# login into postgresql server.
 psql
+
+# changing sonar role password.
+ALTER USER sonar WITH ENCRYPTED password 'balaji123';
+
+# creating new database.
+CREATE DATABASE sonar OWNER sonar;
+
+
+
+
