@@ -17,3 +17,15 @@ yum -y install @postgresql:9.6
 
 # initializing postgresql db cluster.
 postgresql-setup --initdb
+
+# running postgresql server at boot time.
+systemctl enable postgresql
+
+#
+systemctl start postgresql
+
+# 
+sudo passwd postgres
+
+#
+psql
