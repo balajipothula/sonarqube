@@ -1,5 +1,5 @@
 -- changing sonar role password.
-ALTER USER sonar WITH ENCRYPTED password 'balaji123';
+ALTER USER sonar WITH ENCRYPTED password 's3cret';
 
 -- creating sonar database.
 CREATE DATABASE sonar OWNER sonar;
