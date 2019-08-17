@@ -25,6 +25,6 @@ chown -R sonarqube:sonarqube /home/sonarqube/.ssh
 su - sonarqube
 
 # adding new user to sudoers.
-chmod +w /etc/sudoers                                    && \
-echo "sonarqube ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+chmod +w /etc/sudoers                                                && \
+echo "sonarqube       ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers && \
 chmod -w /etc/sudoers
