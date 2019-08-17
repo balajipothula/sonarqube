@@ -30,9 +30,6 @@ chown -R postgres:postgres /var/lib/pgsql && sudo chmod -R u=rwX,go= /var/lib/pg
 # changing postgres user password.
 sudo passwd postgres
 
-# switching to postgres user.
-su - postgres
-
 # creating new user
 createuser sonar
 
