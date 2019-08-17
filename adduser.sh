@@ -21,5 +21,10 @@ cp -R /home/ec2-user/.ssh /home/sonarqube
 # changing owner to .ssh directory.
 chown -R sonarqube:sonarqube /home/sonarqube/.ssh
 
-# switching usesr.
+# switching to new usesr.
 su - sonarqube
+
+# adding new user to sudoers.
+chmod +w /etc/sudoers                                    && \
+echo "sonarqube ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+chmod -w /etc/sudoers
