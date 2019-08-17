@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# Author      : BALAJI POTHULA <balaji.pothula@techie.com>,
+# Date        : 16 August 2019,
+# Description : Adding sonarqube user on rhel.
+
+# Note        : Please run this file with root privilages.
 
 # adding new user account.
 adduser -m -c "SonarQube" sonarqube
