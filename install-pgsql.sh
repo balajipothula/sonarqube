@@ -18,16 +18,14 @@ yum -y install @postgresql:9.6
 # initializing postgresql db cluster.
 postgresql-setup --initdb
 
-# running postgresql server at boot time.
-systemctl enable postgresql
-
-#
+# starting postgresql.
 systemctl start postgresql
 
-sudo chown -R postgres:postgres /var/lib/pgsql && sudo chmod -R u=rwX,go= /var/lib/pgsql
+# starting postgresql at boot time.
+systemctl enable postgresql
 
-# 
-sudo passwd postgres
+# chaging pgsql directory owner to postgres.
+chown -R postgres:postgres /var/lib/pgsql && sudo chmod -R u=rwX,go= /var/lib/pgsql
 
 #
 psql
