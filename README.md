@@ -10,3 +10,5 @@ https://www.cyberciti.biz/faq/install-and-setup-postgresql-on-rhel-8/
 
 useradd -c "SonarQube"  sonarqube
 useradd -c "PostgreSQL" postgres
+
+vi /var/lib/pgsql/data/pg_hba.conf
