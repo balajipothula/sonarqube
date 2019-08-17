@@ -10,13 +10,13 @@ sudo yum -y update
 # installing openjdk8 unzip.
 sudo yum -y install java-1.8.0-openjdk-devel.x86_64 unzip
 
-# 
+# downloading and running sonarqube.
 curl -J -L https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.7.7.zip -o $HOME/sonarqube.zip && \
 unzip -q $HOME/sonarqube.zip -d $HOME/                                                                        && \
 rm -rf   $HOME/sonarqube.zip                                                                                  && \
 mv       $HOME/sonarqube-* $HOME/sonarqube                                                                    && \
-find     $HOME/sonarqube/ -name "COPYING" -type f -delete                                                     && \
-find     $HOME/sonarqube/ -name "*.txt"   -type f -delete                                                     && \
+find     $HOME/sonarqube -name "COPYING" -type f -delete                                                      && \
+find     $HOME/sonarqube -name "*.txt"   -type f -delete                                                      && \
 rm -rf   $HOME/sonarqube/bin/{jsw-license,linux-x86-32,macosx*,windows*}
 
 #  
