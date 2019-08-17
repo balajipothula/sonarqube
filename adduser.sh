@@ -15,6 +15,11 @@ adduser -m -c "SonarQube" sonarqube
 # deleting user password access.
 passwd -d sonarqube
 
+# adding new user to sudoers.
+chmod +w /etc/sudoers                                                && \
+echo "sonarqube       ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers && \
+chmod -w /etc/sudoers
+
 # copying existing .ssh folder to new user.
 cp -R /home/ec2-user/.ssh /home/sonarqube
 
@@ -23,8 +28,3 @@ chown -R sonarqube:sonarqube /home/sonarqube/.ssh
 
 # switching to new usesr.
 su - sonarqube
-
-# adding new user to sudoers.
-chmod +w /etc/sudoers                                                && \
-echo "sonarqube       ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers && \
-chmod -w /etc/sudoers
