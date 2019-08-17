@@ -17,7 +17,9 @@ rm -rf   $HOME/sonarqube.zip                                                    
 mv       $HOME/sonarqube-* $HOME/sonarqube                                                                    && \
 find     $HOME/sonarqube -name "COPYING" -type f -delete                                                      && \
 find     $HOME/sonarqube -name "*.txt"   -type f -delete                                                      && \
-rm -rf   $HOME/sonarqube/bin/{jsw-license,linux-x86-32,macosx*,windows*}
+rm -rf   $HOME/sonarqube/bin/{jsw-license,linux-x86-32,macosx*,windows*}                                      && \
+sed -i 's/#sonar.embeddedDatabase/sonar.embeddedDatabase/' $HOME/sonarqube/conf/sonar.properties              && \
+sh       $HOME/sonarqube/bin/linux-x86-64/sonar.sh start
 
 #  
 curl -J -L http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm -o mysql.rpm && \
@@ -28,9 +30,3 @@ sudo yum -y install mysql-server
 
 # starting mysql daemon.
 sudo systemctl start mysqld
-
-#
-useradd sonarqube
-passwd  sonarqube
-
-unzip   $HOME/sonarqube.zip -C $HOME/
