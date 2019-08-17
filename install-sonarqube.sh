@@ -7,6 +7,9 @@
 # https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.7.7.zip
 # https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.2.1.zip
 
+# exits any line in the bash script fails.
+set -e
+
 # updating rhel packages.
 sudo yum -y update
 
