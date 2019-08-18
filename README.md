@@ -2,7 +2,11 @@
 
 step-00: sudo hostnamectl set-hostname sonarqube  
 
-step-01: sudo ./adduser-postgres.sh   (run under "ec2-user"  user)  
+step-01: run under "ec2-user" user
+----------------------------------  
+curl https://raw.githubusercontent.com/balajipothula/docker/master/setup-docker-redhat.sh -o adduser-postgres.sh  
+sudo ./adduser-postgres.sh  
+
 step-02: sudo ./install-postgresql.sh (run under "postgres"  user)   
 step-03: ./add-sonar-db-user.sh       (run under "postgres"  user)  
 step-04: sudo ./adduser-sonarqube.sh  (run under "ec2-user"  user)    
