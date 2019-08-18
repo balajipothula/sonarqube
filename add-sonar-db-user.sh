@@ -9,3 +9,6 @@ psql -c "CREATE USER sonar WITH PASSWORD 'sonar123';"
 
 # creating database owned by sonar.
 psql -c "CREATE DATABASE sonar OWNER sonar;"
+
+# switching to ec2-user usesr.
+su - ec2-user
