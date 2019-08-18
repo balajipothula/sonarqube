@@ -5,3 +5,5 @@ step-00: sudo hostnamectl set-hostname sonarqube
 step-01: sudo ./adduser-postgres.sh  
 step-02: sudo ./install-postgresql.sh  
 step-03: ./add-sonar-db-user.sh  
+step-04: sudo ./adduser-sonarqube.sh  
+step-05: ./install-sonarqube.sh  
