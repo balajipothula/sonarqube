@@ -25,6 +25,6 @@ find     $HOME/sonarqube -name "COPYING" -type f -delete                        
 find     $HOME/sonarqube -name "*.txt"   -type f -delete                                                         && \
 rm -rf   $HOME/sonarqube/bin/{jsw-license,linux-x86-32,macosx*,windows*}                                         && \
 sed -i 's/#sonar.jdbc.username=/sonar.jdbc.username=sonar/' $HOME/sonarqube/conf/sonar.properties                && \
-sed -i 's/#sonar.jdbc.password=/sonar.jdbc.password=sonar/' $HOME/sonarqube/conf/sonar.properties                && \
+sed -i 's/#sonar.jdbc.password=/sonar.jdbc.password=sonar123/' $HOME/sonarqube/conf/sonar.properties             && \
 sed -i 's/#sonar.jdbc.url=jdbc:postgresql/sonar.jdbc.url=jdbc:postgresql/' $HOME/sonarqube/conf/sonar.properties && \
 sh       $HOME/sonarqube/bin/linux-x86-64/sonar.sh start
