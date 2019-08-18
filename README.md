@@ -1,6 +1,6 @@
 # sonarqube setup on rhel8 machine.
 
-step-01: run under "ec2-user" user
+### step-01: run under "ec2-user" user
 ----------------------------------  
 curl https://raw.githubusercontent.com/balajipothula/docker/master/setup-docker-redhat.sh -o adduser-postgres.sh  
 sudo ./adduser-postgres.sh  
