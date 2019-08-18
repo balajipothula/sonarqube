@@ -27,13 +27,10 @@ systemctl enable postgresql
 # chaging pgsql directory owner to postgres.
 chown -R postgres:postgres /var/lib/pgsql && sudo chmod -R u=rwX,go= /var/lib/pgsql
 
-# creating new user
-createuser sonar
+# changing methods peer -> trust and ident -> md5
+sed -i 's/peer/trust/g' /var/lib/pgsql/data/pg_hba.conf
+sed -i 's/ident/md5/g'  /var/lib/pgsql/data/pg_hba.conf
 
-# executing sonar sql file.
-psql -h 127.0.0.1 -p 5432 -U sonar -d sonar -a -q -f /home/postgres/sonar.sql
-
-
-
-
-
+# creating new user.
+psql -c "CREATE USER sonar WITH PASSWORD 'sonar123';"
+psql -c "CREATE DATABASE sonar OWNER sonar;"
