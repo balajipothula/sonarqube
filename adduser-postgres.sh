@@ -26,5 +26,5 @@ cp -R /home/ec2-user/.ssh /home/postgres
 # changing owner to .ssh directory.
 chown -R postgres:postgres /home/postgres/.ssh
 
-# switching to new usesr.
+# switching to postgres usesr.
 su - postgres
