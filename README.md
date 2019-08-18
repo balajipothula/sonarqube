@@ -4,4 +4,4 @@ step-00: sudo hostnamectl set-hostname sonarqube
 
 step-01: sudo ./adduser-postgres.sh  
 step-02: sudo ./install-postgresql.sh  
-step-03: ALTER USER sonar WITH ENCRYPTED password 's3cret';
+step-03:   
