@@ -6,6 +6,9 @@
 
 # Note        : Please run this file with root privilages.
 
+# exits any line in the bash script fails.
+set -e
+
 # updating rhel packages.
 yum -y update
 
