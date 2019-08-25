@@ -20,7 +20,7 @@ curl -J -O -L https://raw.githubusercontent.com/balajipothula/sonarqube/master/a
 chmod +x adduser-sonarqube.sh  
 sudo ./adduser-sonarqube.sh  
 
-step-05: run under "sonarqube"user  
-curl -J -O -L https://raw.githubusercontent.com/balajipothula/sonarqube/master/install-sonar-qube-server.sh  
-chmod +x install-sonar-qube-server.sh  
-./install-sonar-qube-server.sh  
+step-05: run under "sonarqube" user  
+curl -J -O -L https://raw.githubusercontent.com/balajipothula/sonarqube/master/install-sonarqube-server.sh  
+chmod +x install-sonarqube-server.sh  
+./install-sonarqube-server.sh  
