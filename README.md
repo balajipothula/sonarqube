@@ -21,6 +21,6 @@ chmod +x adduser-sonarqube.sh
 sudo ./adduser-sonarqube.sh  
 
 step-05: run under "sonarqube"user  
-curl -J -O -L https://raw.githubusercontent.com/balajipothula/sonarqube/master/install-sonarqube.sh  
-chmod +x install-sonarqube.sh  
-./install-sonarqube.sh  
+curl -J -O -L https://raw.githubusercontent.com/balajipothula/sonarqube/master/install-sonar-qube-server.sh  
+chmod +x install-sonar-qube-server.sh  
+./install-sonar-qube-server.sh  
