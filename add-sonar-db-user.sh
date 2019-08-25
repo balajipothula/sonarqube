@@ -8,10 +8,10 @@
 set -e
 
 # creating new user.
-psql -c "CREATE USER sonar WITH PASSWORD 'sonar123';"
+psql -c "CREATE USER sonarqube WITH PASSWORD 'sonarqube123';"
 
 # creating database owned by sonar.
-psql -c "CREATE DATABASE sonar OWNER sonar;"
+psql -c "CREATE DATABASE sonarqube OWNER sonarqube;"
 
 # switching to ec2-user usesr.
 sudo su - ec2-user
