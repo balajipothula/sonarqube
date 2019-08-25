@@ -11,9 +11,9 @@ chmod +x install-postgresql.sh
 sudo ./install-postgresql.sh  
 
 step-03: run under "postgres" user  
-curl -J -O -L https://raw.githubusercontent.com/balajipothula/sonarqube/master/add-sonar-db-user.sh  
-chmod +x add-sonar-db-user.sh  
-./add-sonar-db-user.sh  
+curl -J -O -L https://raw.githubusercontent.com/balajipothula/sonarqube/master/add-sonarqube-db-user.sh  
+chmod +x add-sonarqube-db-user.sh  
+./add-sonarqube-db-user.sh  
 
 step-04: run under "ec2-user" user  
 curl -J -O -L https://raw.githubusercontent.com/balajipothula/sonarqube/master/adduser-sonarqube.sh  
