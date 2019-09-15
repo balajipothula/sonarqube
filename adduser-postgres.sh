@@ -4,7 +4,7 @@
 # Date        : 16 August 2019,
 # Description : Adding postgres user on rhel.
 
-# Note        : Please run this file with root privilages.
+# Note        : Please run this file with sudo privilages.
 
 # exits any line in the bash script fails.
 set -e
