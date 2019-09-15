@@ -1,3 +1,5 @@
+jdbc:postgresql://10.0.0.100/jenkins
+
 psql -h 10.0.0.100 -p 5432 -U jenkins jenkinsdb
 
 -- listing databases.
